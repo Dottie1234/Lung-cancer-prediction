@@ -3,17 +3,10 @@ import streamlit as st
 import pickle
 import matplotlib.pyplot as plt
 
-# we used the sklearn library for the models prediction.
-# pandas, streamlit library for the webapp
-#dataset is gotten from kaggle
-# Logistic Regression model with 92 percent accuracy and 92 percent precision.
-
-
 
 st.title('LUNG CANCER PREDICTION')
 model_lr = pickle.load(open('lr_model', 'rb'))
-# option = st.radio('Do you want to make a single prediction or multiple prediction', ['Single predicton', 'Multiple prediction'])
-    
+
 tab1, tab2 = st.tabs(['Single prediction', 'Multiple prediction'])
 
 with tab1:
